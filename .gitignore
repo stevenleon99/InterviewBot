@@ -5,7 +5,4 @@ __pycache__
 .env
 
 # dependencies
-/node_modules
-
-# production
-/build
+node_modules
