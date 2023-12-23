@@ -3,3 +3,9 @@ __pycache__
 
 # file
 .env
+
+# dependencies
+/node_modules
+
+# production
+/build
