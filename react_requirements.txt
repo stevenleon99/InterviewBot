@@ -1,0 +1,15 @@
+Install Node 20.10.0 LTS from:
+https://nodejs.org/en
+
+If you've previously installed create-react-app globally via npm install -g create-react-app, we recommend you uninstall the package using npm uninstall -g create-react-app or yarn global remove create-react-app to ensure that npx always uses the latest version.
+https://create-react-app.dev/docs/getting-started
+
+create the react app frontend package by:
+npx create-react-app frontend
+
+start app:
+cd .\frontend\
+npm start
+
+install dependencies:
+npm install bulma moment 

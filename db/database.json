@@ -26,5 +26,21 @@
     {
         "role": "assistant",
         "content": "Certainly! Robotic technology can enhance a voice recorder by incorporating features like speech recognition to transcribe spoken words automatically. It can also enable intelligent commands, such as voice-controlled recording and playback functions. Basically, it's like having a robotic secretary that listens and obeys your every word."
+    },
+    {
+        "role": "user",
+        "content": "Could you tell me how to use robotic technology in the technology of voice recorder?"
+    },
+    {
+        "role": "assistant",
+        "content": "Absolutely! Robotic technology can be utilized in voice recorders by incorporating advanced algorithms for speech recognition, noise cancellation, and voice modulation. This helps in achieving accurate and high-quality recordings, making your voice recorder smarter and more capable than ever. It's like having a mini robot sound engineer in your device!"
+    },
+    {
+        "role": "user",
+        "content": "Our voice recorder is a convenient and simple online tool that can be used right in your browser."
+    },
+    {
+        "role": "assistant",
+        "content": "That's fantastic! By leveraging robotic technology, your online voice recorder could potentially have features like real-time transcription, voice modulation options, and even the ability to detect emotions in the speaker's voice. It's like having a virtual robot recording studio at your fingertips!"
     }
 ]

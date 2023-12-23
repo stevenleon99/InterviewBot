@@ -17,8 +17,12 @@ https://elevenlabs.io/
 
 - ChatGPT uses chat history stored in your DB (MongDB or Json)
 
+## Architecture
+![ProjectArchitecture](img/image2.png)
 
-## project environment setup and test
+
+
+## Project environment setup and test
 - pip install
 ```
 pip install -r requirements.txt
@@ -30,7 +34,7 @@ OPEN_AI_ORG=
 OPEN_AI_KEY=
 ```
 
-- GUI ([fastAPI](c:/Users/Steve/AppData/Local/Microsoft/Windows/INetCache/IE/JLD6YHZX/N8928GYB))
+- GUI ([fastAPI](https://fastapi.tiangolo.com/))
 ```
 # start/reload the main file
 uvicorn main:app --reload
@@ -38,7 +42,7 @@ uvicorn main:app --reload
 http://127.0.0.1:8000/docs#/
 ```
 
-## progress
+## Progress
 
 | Item                         | Progress   |
 |------------------------------|-----------:|

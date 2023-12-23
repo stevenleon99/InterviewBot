@@ -15,12 +15,6 @@ client = OpenAI()
 
 app = FastAPI()
 
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
-
-
-
 # send the audio *name file to chatGPT
 @app.post("/talk")
 async def post_audio(file:UploadFile):
@@ -40,9 +34,8 @@ async def post_audio(file:UploadFile):
   return {"message": "Audio transcribed"}
 
 
-
 def transcribe_auido(file):
-    audio_file = open(os.path.join("voice", file.filename), "rb")
+    audio_file = open(os.path.join("../voice", file.filename), "rb")
     transcript = client.audio.transcriptions.create(
                     model="whisper-1", 
                     file=audio_file
@@ -82,7 +75,7 @@ def get_chat_response(user_msg):
   
 def load_messages():
   messages = []
-  file = "db/database.json"
+  file = "../db/database.json"
   empty = os.stat(file).st_size == 0
   
   # loop through history and add messages if not empty
@@ -102,6 +95,12 @@ def load_messages():
   return messages
 
 def save_message(messages):
-  file = "db/database.json"
+  file = "../db/database.json"
   with open(file, 'w') as f:
     json.dump(messages, f)
+    
+   
+@app.get("/api")
+async def read_root():
+    return {"Hello": "World"}
+  
