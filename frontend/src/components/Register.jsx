@@ -7,6 +7,7 @@ function Register() {
     company: '',
     jobdescription:'',
   });
+  const [responseMessage, setResponseMessage] = useState('');
 
   const handleChange = (event) => {
     setFormData({
@@ -16,7 +17,7 @@ function Register() {
   };
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
+    event.preventDefault(); // prevent the default event association with submit action
 
     try {
       const response = await fetch('/api/register', {
@@ -26,7 +27,7 @@ function Register() {
         },
         body: JSON.stringify(formData),
       });
-
+      setResponseMessage("Status: " + response.statusText);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -86,7 +87,11 @@ function Register() {
                 </div>
             </div>
             <br></br>
-            <button className="button is-primary" type="submit">Confrimed</button>
+            <div>
+              <button className="button is-primary" type="submit">Confrim</button>
+              <div>{responseMessage}</div>
+            </div>
+            
         </form>
     </div>
   );

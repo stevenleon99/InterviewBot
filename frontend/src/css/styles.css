@@ -1,0 +1,6 @@
+.chatHistoryStyle {
+    min-width: 600px;
+    max-Width: 800px ;
+    word-Break: break-word ;
+    /* Additional styles can be added here */
+}

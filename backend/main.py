@@ -61,9 +61,9 @@ class RegistrationData(BaseModel):
 
 @app.post("/api/register")
 async def post_register(message:RegistrationData):
-  message = f"'position':{message.position},\
-    'company':{message.company},\
-    'jobdescription':{message.jobdescription}"
+  message = {'position':message.position,
+             'company':message.company,
+             'jobdescription':message.jobdescription}
   
   '''
   position='Sr Verification Engineer' 

@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import Register from "./components/Register";
+import Chatdisplay from "./components/Displaychat"
 
 const App = () => {
   const [message, setMessage] = useState("");
@@ -27,10 +28,19 @@ const App = () => {
     getWelcomeMessage();
   }, []);
 
+  
   return (
     <div className="App">
       <h1>{message}</h1>
-      <Register></Register>
+      <div className="level-left">
+        <div className="level-item">
+          <Register></Register>
+        </div>
+        <div className="level-item">
+          <Chatdisplay></Chatdisplay>
+        </div>
+      </div>
+      
     </div>
   );
 }
