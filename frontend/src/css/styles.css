@@ -1,6 +1,19 @@
 .chatHistoryStyle {
-    min-width: 600px;
-    max-Width: 800px ;
     word-Break: break-word ;
+    max-height: 600px;
+    min-width: auto ;
+    overflow: auto;
     /* Additional styles can be added here */
+}
+
+.pageTitle {
+    text-align: center; 
+    font-weight: bold; 
+    color: black;
+}
+
+.table.is-borderless td, 
+.table.is-borderless th {
+  border: none;
+  background-color: rgb(235, 255, 252);
 }

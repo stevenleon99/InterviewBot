@@ -1,46 +1,26 @@
-import React, {useEffect, useState} from "react";
 import Register from "./components/Register";
 import Chatdisplay from "./components/Displaychat"
+import Header from "./components/Header"
 
 const App = () => {
-  const [message, setMessage] = useState("");
-
-  const getWelcomeMessage = async () => {
-    const requestOptions = {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-
-    const response = await fetch("/api", requestOptions)  // set proxy in package.json
-    const data = await response.json();
-
-    if (!response.ok){
-      console.log("response not correct when fetch /api");
-    } else{
-      console.log(data.message)
-      setMessage(data.message);
-    }
-  };
-
-  useEffect(() => {
-    getWelcomeMessage();
-  }, []);
-
   
   return (
     <div className="App">
-      <h1>{message}</h1>
-      <div className="level-left">
+      <div className="level-center">
+        <Header></Header>
         <div className="level-item">
           <Register></Register>
         </div>
         <div className="level-item">
           <Chatdisplay></Chatdisplay>
         </div>
+        <div className="level-item">
+          <div className="level-left">
+            <button class="button is-danger is-hover" style={{width:"100px"}}>RECORD</button>
+            <button className="button is-info is-hover" style={{width:"100px"}}>SPEAK</button>
+          </div>
+        </div>
       </div>
-      
     </div>
   );
 }

@@ -42,14 +42,15 @@ uvicorn main:app --reload
 http://127.0.0.1:8000/docs#/
 ```
 
+![GUI Image](/img/image3.png)
 ## Progress
 
 | Item                         | Progress   |
 |------------------------------|-----------:|
 |speech2txt                    |✅         |
 |gpt response                  |✅         |
-|personal shadow creation      |🕑         |
+|personal shadow creation      |✅         |
 |txt2speech                    |🕑         |
-|front-end gui                 |🕑         |
+|front-end gui                 |✅         |
 |various speech input          |🕑         |
 |various speech voice output   |🕑         |

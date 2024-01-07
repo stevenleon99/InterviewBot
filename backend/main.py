@@ -72,3 +72,10 @@ async def post_register(message:RegistrationData):
   '''
   save_personInfo(message)
   return {"message": "Person information saved"}
+
+@app.get("/api/getChat")
+async def get_chatHistory():
+    chatHistory_path = '../db/chathistory.json'
+    with open(chatHistory_path, 'r') as f:
+        data = json.load(f)
+    return {"message": json.dumps(data)}
