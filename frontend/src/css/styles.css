@@ -17,3 +17,7 @@
   border: none;
   background-color: rgb(235, 255, 252);
 }
+
+#myButton:active{
+  background-color:forestgreen;
+}

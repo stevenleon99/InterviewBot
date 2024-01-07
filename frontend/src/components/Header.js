@@ -18,7 +18,7 @@ const Header = () =>{
         if (!response.ok){
         console.log("response not correct when fetch /api");
         } else{
-        console.log(data.message)
+        console.log(data.message);
         setMessage(data.message);
         }
     };

@@ -1,6 +1,8 @@
 import Register from "./components/Register";
 import Chatdisplay from "./components/Displaychat"
 import Header from "./components/Header"
+import Record from "./components/Record"
+import Talk from "./components/Talk";
 
 const App = () => {
   
@@ -16,7 +18,8 @@ const App = () => {
         </div>
         <div className="level-item">
           <div className="level-left">
-            <button class="button is-danger is-hover" style={{width:"100px"}}>RECORD</button>
+            <Record></Record>
+            <Talk></Talk>
             <button className="button is-info is-hover" style={{width:"100px"}}>SPEAK</button>
           </div>
         </div>

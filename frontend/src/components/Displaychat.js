@@ -42,14 +42,16 @@ function Displaychat() {
                     <div className="message-body">
                         <table className='table is-hoverable is-borderless'>
                             <thead>
-                                <th style={{minWidth:"100px"}}>Role</th>
-                                <th>Content</th>
+                                <tr>
+                                    <th style={{minWidth:"100px"}}>Role</th>
+                                    <th>Content</th>
+                                </tr>
                             </thead>
                             <tbody>
-                                {chatHistory.map(item => (
-                                    <tr>
+                                {chatHistory.map((item, index) => (
+                                    <tr key={index}>
                                         <td>{item.role}</td>
-                                        <td>{item.content}</td>
+                                        <td key={index+1}>{item.content}</td>
                                     </tr>
                                 ))}
                             </tbody>

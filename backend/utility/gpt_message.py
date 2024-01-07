@@ -1,8 +1,10 @@
 import os
 import json
 
-def transcribe_auido(client, file):
-    audio_file = open(os.path.join("../voice", file.filename), "rb")
+FILENAME = 'audio.mp3'
+
+def transcribe_auido(client):
+    audio_file = open(os.path.join("../voice", FILENAME), "rb")
     transcript = client.audio.transcriptions.create(
                     model="whisper-1", 
                     file=audio_file

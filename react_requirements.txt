@@ -12,4 +12,4 @@ cd .\frontend\
 npm start
 
 install dependencies:
-npm install bulma moment 
+npm install bulma moment axios

@@ -42,7 +42,13 @@ uvicorn main:app --reload
 http://127.0.0.1:8000/docs#/
 ```
 
-![GUI Image](/img/image3.png)
+![GUI Image](/img/image4.png)
+
+
+## Improvement
+- background noise of recording can be removed
+
+
 ## Progress
 
 | Item                         | Progress   |
@@ -52,5 +58,5 @@ http://127.0.0.1:8000/docs#/
 |personal shadow creation      |✅         |
 |txt2speech                    |🕑         |
 |front-end gui                 |✅         |
-|various speech input          |🕑         |
+|various speech input          |✅         |
 |various speech voice output   |🕑         |

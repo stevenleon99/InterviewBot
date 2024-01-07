@@ -1,5 +1,5 @@
 from typing import Union
-from fastapi import FastAPI, UploadFile
+from fastapi import FastAPI, UploadFile, File
 from dotenv import load_dotenv, dotenv_values
 import os
 import openai
@@ -37,9 +37,9 @@ async def root():
     return {"message": "Welcome to InterviewBot"}
 
 # send the audio *name file to chatGPT
-@app.post("/talk")
-async def post_audio(file:UploadFile):
-  user_msg = transcribe_auido(client, file)
+@app.get("/api/talk")
+async def post_audio():
+  user_msg = transcribe_auido(client)
   '''
   sample transcription: 
   Transcription(text='Our voice recorder is a convenient and simple 
@@ -79,3 +79,10 @@ async def get_chatHistory():
     with open(chatHistory_path, 'r') as f:
         data = json.load(f)
     return {"message": json.dumps(data)}
+
+
+@app.post("/api/uploadvoice")
+async def upload_voice(file:UploadFile = File(...)):
+    with open("../voice/audio.mp3", "wb") as buffer:
+        buffer.write(file.file.read())
+        return {"filename": file.filename}
