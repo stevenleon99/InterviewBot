@@ -47,7 +47,14 @@ http://127.0.0.1:8000/docs#/
 
 ## Improvement
 - background noise of recording can be removed
-
+```
+Install ffmpeg from ffmpeg.org
+Version: ffmpeg version 2024-01-04-git-33698ef891-essentials_build-www.gyan.dev
+```
+```
+Implement spectral gating noise reduction algorithm
+https://github.com/timsainb/noisereduce
+```
 
 ## Progress
 

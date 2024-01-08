@@ -1,14 +1,18 @@
 import os
 import json
+from utility.noise_reduce import reduceNoise, deleteAudios
+import time
 
-FILENAME = 'audio.mp3'
+FILENAME = 'audio_reduce_noise.mp3'
 
 def transcribe_auido(client):
+    reduceNoise()
     audio_file = open(os.path.join("../voice", FILENAME), "rb")
     transcript = client.audio.transcriptions.create(
                     model="whisper-1", 
                     file=audio_file
                     )
+    deleteAudios()
     return transcript
 
 

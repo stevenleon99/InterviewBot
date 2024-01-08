@@ -2,3 +2,4 @@ pip install fastapi==0.105.0
 pip install "uvicorn[standard]"
 pip install openai
 pip install python-dotenv
+pip install noisereduce

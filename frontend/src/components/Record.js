@@ -31,7 +31,7 @@ const Record = () => {
         if (mediaRecorderRef.current){
             mediaRecorderRef.current.stop();
             mediaRecorderRef.current.onstop = async () => {
-                const audioBlob = new Blob(audioChunksRef.current, { type: 'audio/wav' });
+                const audioBlob = new Blob(audioChunksRef.current, { type: 'audio/webm' });
                 const formData = new FormData();
                 formData.append('file', audioBlob);
                 // Send the audio file to the backend server

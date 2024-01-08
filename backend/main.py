@@ -83,6 +83,6 @@ async def get_chatHistory():
 
 @app.post("/api/uploadvoice")
 async def upload_voice(file:UploadFile = File(...)):
-    with open("../voice/audio.mp3", "wb") as buffer:
+    with open("../voice/audio.webm", "wb") as buffer:
         buffer.write(file.file.read())
         return {"filename": file.filename}
