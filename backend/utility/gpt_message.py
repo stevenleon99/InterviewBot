@@ -59,10 +59,18 @@ def load_messages():
         messages.append(item)
   else:
     # change the context background if needed
-    messages.append(
-        {"role": "system", "content": "You are an experienced interviewee professional at computer science and robotics. Answer \
-          the interview question from the user. Your name is Steve. The user is Sunny. Keep responses under 50 words and sometimes\
-          be funny."},
+    with open("../db/personinfo.json", "r") as info:
+        personInfo = json.load(info)
+    if personInfo:
+      content = f"You are an experienced interviewee professional at {personInfo['jobdescription']}. You are applying for the position {personInfo['position']} from {personInfo['company']}. Answer the interview question from the user. Your name is Steve. The Interviewer is Sunny. Keep responses under 50 words and sometimes be funny."
+      messages.append(
+        {"role": "system", "content": content},
+    )
+    else:
+      messages.append(
+          {"role": "system", "content": "You are an experienced interviewee professional at computer science and robotics. Answer \
+            the interview question from the user. Your name is Steve. The user is Sunny. Keep responses under 50 words and sometimes\
+            be funny."},
     )
   return messages
 
